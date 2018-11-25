@@ -46,7 +46,7 @@ var listCmd = &cobra.Command{
 		} else if Message {
 			getMonitorMessage(id)
 		} else {
-			fmt.Println("You must specify an output format using --output")
+			fmt.Println("You must specify an output format using -e or -m")
 		}
 	},
 }
