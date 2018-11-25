@@ -40,7 +40,6 @@ var listCmd = &cobra.Command{
 		if err != nil {
 			log.Fatalf("fatal: %s\n", err)
 		}
-		fmt.Println(os.Args[3])
 
 		if Exitcode {
 			getMonitorCode(id)
