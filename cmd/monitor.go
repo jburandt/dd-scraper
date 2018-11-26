@@ -15,10 +15,10 @@ var Message bool
 func init() {
 	RootCmd.PersistentFlags().BoolVarP(&Exitcode, "exitcode", "e", false, "Set output to exit code")
 	RootCmd.PersistentFlags().BoolVarP(&Message, "message", "m", false, "Used to output message")
-	RootCmd.AddCommand(listCmd)
+	RootCmd.AddCommand(monitorCmd)
 }
 
-var listCmd = &cobra.Command{
+var monitorCmd = &cobra.Command{
 	Use:   "monitor",
 	Short: "grab monitor info",
 	Long:  "Fetch monitor information and status from datadog API",
@@ -90,5 +90,3 @@ func getMonitorMessage(i int) {
 	fmt.Println(*m.Message)
 	return
 }
-
-
